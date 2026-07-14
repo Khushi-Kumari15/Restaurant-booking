@@ -1,0 +1,520 @@
+/* =======================================
+   Royal Restaurant Booking System
+   Project By: Khushi Kumari
+======================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#FFD700;
+    border-radius:20px;
+}
+
+/* Navbar */
+
+nav{
+    width:100%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(17,24,39,.85);
+    backdrop-filter:blur(15px);
+    box-shadow:0 8px 25px rgba(0,0,0,.5);
+}
+
+.logo{
+    color:#FFD700;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+    padding:8px 15px;
+    border-radius:30px;
+}
+
+nav ul li a:hover{
+    background:#FFD700;
+    color:#111827;
+}
+
+/* Hero */
+
+.hero{
+    min-height:92vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:65px;
+    color:#FFD700;
+    margin-bottom:20px;
+    text-shadow:0 0 15px rgba(255,215,0,.4);
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:20px;
+    color:#d1d5db;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 40px;
+    border-radius:50px;
+    background:#FFD700;
+    color:#111827;
+    text-decoration:none;
+    font-weight:700;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(255,215,0,.35);
+}
+
+.btn:hover{
+    transform:translateY(-6px);
+    background:white;
+    box-shadow:0 15px 35px rgba(255,255,255,.25);
+}
+
+/* Section */
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    color:#FFD700;
+    font-size:42px;
+    margin-bottom:50px;
+    position:relative;
+}
+
+.section-title::after{
+    content:"";
+    width:90px;
+    height:4px;
+    background:#FFD700;
+    display:block;
+    margin:15px auto;
+    border-radius:20px;
+}
+/* =========================
+   Premium Cards
+========================= */
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
+    padding:30px;
+    transition:.4s;
+    text-align:center;
+    overflow:hidden;
+    position:relative;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:rgba(255,215,0,.12);
+    border-radius:50%;
+    top:-50px;
+    right:-50px;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 40px rgba(255,215,0,.25);
+}
+
+.card h3{
+    color:#FFD700;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.card p{
+    color:#ddd;
+    line-height:1.8;
+}
+
+.card h2{
+    margin-top:15px;
+    color:#FFD700;
+}
+
+/* =========================
+   Form
+========================= */
+
+form{
+    max-width:750px;
+    margin:auto;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+input,
+textarea,
+select{
+
+    width:100%;
+    margin:12px 0;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#f5f5f5;
+    font-size:16px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    outline:none;
+    box-shadow:0 0 10px #FFD700;
+}
+
+button{
+
+    width:100%;
+    background:#FFD700;
+    color:#111827;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+
+    background:white;
+    transform:scale(1.03);
+}
+
+/* =========================
+   Table
+========================= */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+table th{
+
+    background:#FFD700;
+    color:#111827;
+    padding:15px;
+}
+
+table td{
+
+    padding:15px;
+    background:rgba(255,255,255,.05);
+    text-align:center;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+table tr:hover{
+
+    background:rgba(255,215,0,.08);
+}
+
+/* Dashboard Card */
+
+.dashboard-card{
+
+    background:linear-gradient(135deg,#FFD700,#ffb700);
+    color:#111827;
+    border-radius:20px;
+    text-align:center;
+    padding:35px;
+    font-weight:bold;
+    margin-bottom:30px;
+    box-shadow:0 15px 35px rgba(255,215,0,.3);
+}
+
+.dashboard-card h1{
+
+    font-size:45px;
+}
+/* =========================
+   Footer
+========================= */
+
+footer{
+    background:#0f172a;
+    text-align:center;
+    padding:30px;
+    margin-top:60px;
+    border-top:2px solid #FFD700;
+}
+
+footer p{
+    color:#d1d5db;
+    font-size:16px;
+    letter-spacing:1px;
+}
+
+/* =========================
+   Animation
+========================= */
+
+.card,
+.btn,
+button,
+form,
+table{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.logo{
+
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+
+    from{
+        text-shadow:0 0 8px #FFD700;
+    }
+
+    to{
+        text-shadow:0 0 25px #FFD700;
+    }
+
+}
+
+/* =========================
+   Hover Effects
+========================= */
+
+.card:hover h3{
+
+    color:white;
+    transition:.3s;
+}
+
+input:hover,
+textarea:hover,
+select:hover{
+
+    box-shadow:0 0 12px rgba(255,215,0,.5);
+}
+
+button:active,
+.btn:active{
+
+    transform:scale(.96);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media(max-width:992px){
+
+.hero h1{
+
+font-size:50px;
+
+}
+
+.section-title{
+
+font-size:36px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+
+flex-direction:column;
+padding:20px;
+
+}
+
+nav ul{
+
+flex-direction:column;
+margin-top:20px;
+align-items:center;
+
+}
+
+nav ul li{
+
+margin:10px 0;
+
+}
+
+.hero{
+
+padding:60px 20px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.section-title{
+
+font-size:30px;
+
+}
+
+.card-container{
+
+grid-template-columns:1fr;
+
+}
+
+form{
+
+padding:25px;
+
+}
+
+table{
+
+display:block;
+overflow-x:auto;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.logo{
+
+font-size:24px;
+
+}
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+}
+
+.btn,
+button{
+
+width:100%;
+
+}
+
+}
+
+/* =========================
+   Selection Color
+========================= */
+
+::selection{
+
+background:#FFD700;
+color:#111827;
+
+}
